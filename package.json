@@ -1,0 +1,10 @@
+{
+  "name": "cloud-security-devops-roadmap",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roadmap visual en español: Java y Backend hacia Cloud, DevOps, SRE y Cloud Security.",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "serve": "python3 -m http.server 8000 --directory dist"
+  }
+}

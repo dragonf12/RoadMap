@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#192b24">
+  <meta name="description" content="Tu roadmap de 18–24 meses: Java, Spring Boot, Linux, redes, Docker, AWS, CI/CD, Terraform, Kubernetes y seguridad. Explora 12 etapas con proyectos, recursos y progreso personal.">
+  <title>PATH — De Backend a Cloud & Security</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="logic.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+    <a class="brand" href="#overview" aria-label="PATH, inicio"><span class="brand-symbol">p<span>·</span></span><span>PATH<span class="brand-sub">LEARNING ROADMAP</span></span></a>
+    <div class="workspace-label">TU ESPACIO DE APRENDIZAJE</div>
+    <nav class="nav-links">
+      <a class="nav-link active" href="#overview" data-icon="grid">Panorama<span class="nav-badge">01</span></a>
+      <a class="nav-link" href="#journey" data-icon="route">Las 12 etapas<span class="nav-badge">12</span></a>
+      <a class="nav-link" href="#tracks" data-icon="branch">Elige tu ruta</a>
+      <a class="nav-link" href="#portfolio" data-icon="box">Tu portafolio</a>
+      <a class="nav-link" href="#career" data-icon="briefcase">Primer empleo</a>
+      <a class="nav-link" href="#certifications" data-icon="award">Certificaciones</a>
+      <a class="nav-link" href="#week" data-icon="calendar">Plan semanal</a>
+      <a class="nav-link" href="#resources" data-icon="book">Recursos oficiales</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-progress"><span>Tu avance</span><strong id="side-percent">0%</strong></div>
+      <div class="progress-bar"><span id="side-bar"></span></div>
+      <p id="side-count">0 de 12 etapas completadas</p>
+      <div class="profile"><span class="avatar">D</span><div><strong>David</strong><span>Construyendo mi siguiente paso</span></div><span class="online-dot" aria-hidden="true"></span></div>
+    </div>
+  </aside>
+  <div class="mobile-overlay" id="mobile-overlay" hidden></div>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-title"><button id="menu-toggle" class="icon-button mobile-only" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar" data-icon="menu"></button><span class="breadcrumb">Mi aprendizaje <span>/</span> <strong>Cloud & Security</strong></span></div>
+      <div class="top-actions"><span class="live-label"><span></span> A tu propio ritmo</span><button class="small-button" id="print-button" data-icon="download">Imprimir guía</button></div>
+    </header>
+    <main id="main">
+      <section class="overview section" id="overview" aria-labelledby="hero-title">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="tiny-line"></span> DE ESTUDIANTE A INGENIERO</span>
+            <h1 id="hero-title">Primero el código.<br>Después, <em>todo<br class="desktop-break"> un sistema.</em></h1>
+            <p>Tu camino de <strong>Backend a Cloud, DevOps y seguridad</strong>. Una base común, proyectos reales y tres rutas para descubrir dónde quieres crecer.</p>
+            <div class="hero-buttons"><a class="button button-dark" href="#journey" id="start-button">Comenzar mi ruta <span data-icon="arrow-right"></span></a><a class="button button-light" href="#tracks">Explorar especialidades <span data-icon="arrow-up-right"></span></a></div>
+            <div class="hero-footnote"><span data-icon="clock"></span> 18–24 meses orientativos · En paralelo con la universidad</div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Una base de Java y Backend conduce a Cloud y luego se abre a DevOps y SRE, Cloud Security y DevSecOps">
+            <div class="art-top"><span class="art-label"><span></span> CONSTRUYE TU FUTURO</span><span class="art-version">v.01</span></div>
+            <svg class="path-art" viewBox="0 0 430 350" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#496050"/></pattern></defs>
+              <rect width="430" height="350" fill="url(#dots)" opacity=".45"/>
+              <circle cx="215" cy="163" r="118" fill="none" stroke="#445548" stroke-dasharray="3 6"/>
+              <circle cx="215" cy="163" r="85" fill="none" stroke="#34463b"/>
+              <path d="M215 60V112M215 195V238M215 217H83V248M215 217H347V248" stroke="#85987e" stroke-width="2" fill="none"/>
+              <path d="M215 60V108" stroke="#d5f36b" stroke-width="2"/>
+              <circle cx="215" cy="86" r="4" fill="#d5f36b"/>
+              <rect x="145" y="22" width="140" height="40" rx="20" fill="#2d4236" stroke="#536847"/>
+              <text x="215" y="47" fill="#e9eee5" text-anchor="middle" font-size="13" font-family="Arial,sans-serif">Java + Backend</text>
+              <rect x="158" y="110" width="114" height="86" rx="22" fill="#d5f36b"/>
+              <path d="M190 151a12 12 0 0 1 11-12 15 15 0 0 1 28-1 10 10 0 0 1 1 20h-29a11 11 0 0 1-11-7" fill="none" stroke="#203629" stroke-width="2.3" stroke-linecap="round"/>
+              <text x="215" y="181" fill="#203629" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif">CLOUD</text>
+              <circle cx="215" cy="217" r="5" fill="#d5f36b"/>
+              <rect x="24" y="248" width="118" height="66" rx="12" fill="#2b4034" stroke="#536b4e"/>
+              <text x="83" y="275" fill="#d5f36b" text-anchor="middle" font-size="17" font-family="monospace">&lt;/&gt;</text>
+              <text x="83" y="298" fill="#e9eee5" text-anchor="middle" font-size="11" font-family="Arial,sans-serif">DevOps / SRE</text>
+              <rect x="156" y="248" width="118" height="66" rx="12" fill="#2b4034" stroke="#536b4e"/>
+              <path d="M215 260l9 4v7c0 7-9 11-9 11s-9-4-9-11v-7z" fill="none" stroke="#d5f36b" stroke-width="1.8"/>
+              <text x="215" y="298" fill="#e9eee5" text-anchor="middle" font-size="11" font-family="Arial,sans-serif">Cloud Security</text>
+              <rect x="288" y="248" width="118" height="66" rx="12" fill="#2b4034" stroke="#536b4e"/>
+              <path d="M339 270h16m-8-8v16" stroke="#d5f36b" stroke-width="2"/>
+              <text x="347" y="298" fill="#e9eee5" text-anchor="middle" font-size="11" font-family="Arial,sans-serif">DevSecOps</text>
+              <text x="58" y="145" fill="#a6b39e" font-size="11" font-family="monospace">git push</text>
+              <text x="320" y="164" fill="#a6b39e" font-size="11" font-family="monospace">{ build }</text>
+              <path d="M114 139l6 6-6 6M307 172l-6 6 6 6" fill="none" stroke="#839573"/>
+            </svg>
+            <div class="art-bottom"><span>Una base. Muchas posibilidades.</span><span class="art-plus">↗</span></div>
+          </div>
+        </div>
+        <div class="stats-strip"><div><span class="stat-number">12</span><span class="stat-caption">Etapas de aprendizaje</span></div><div><span class="stat-number">04</span><span class="stat-caption">Proyectos de portafolio</span></div><div><span class="stat-number">03</span><span class="stat-caption">Rutas de especialización</span></div><div class="stat-progress"><div class="progress-ring" id="progress-ring"><span id="hero-percent">0<span>%</span></span></div><div><strong id="hero-completed">Tu camino empieza aquí</strong><span class="stat-caption" id="criteria-count">0 objetivos completados</span></div></div></div>
+        <div class="focus-banner"><div class="focus-icon" data-icon="target"></div><div><span>AHORA MISMO, TU PRIORIDAD</span><strong>Java <b>→</b> Git <b>→</b> SQL <b>→</b> Spring Boot</strong><p>Construye una aplicación que entiendas. Después aprenderás a desplegarla, operarla y protegerla.</p></div><a href="#journey" id="resume-button" class="text-link">Mi siguiente paso <span data-icon="arrow-right"></span></a></div>
+      </section>
+      <section class="section" id="journey" aria-labelledby="journey-title">
+        <div class="section-heading"><div><span class="eyebrow">01 / EL CAMINO COMPLETO</span><h2 id="journey-title">Una etapa a la vez.</h2><p>Explora el mapa y abre una etapa para aprender, construir y comprobar tu avance.</p></div><span class="section-pill" data-icon="route">De los fundamentos a producción</span></div>
+        <div class="phase-labels"><span><i class="phase-dot phase-foundations"></i> 01–03 · Construye la base</span><span><i class="phase-dot phase-cloud"></i> 04–08 · Lleva tu código a la nube</span><span><i class="phase-dot phase-security"></i> 09–12 · Opera y protege</span></div>
+        <div class="timeline" id="timeline"></div>
+        <p class="timing-note"><span data-icon="info"></span> Los meses son una guía flexible. Avanza por lo que puedes demostrar; los fundamentos de seguridad se practican desde la primera etapa.</p>
+        <div class="explorer">
+          <div class="stage-navigation"><label class="search-box"><span data-icon="search"></span><input type="search" id="stage-search" placeholder="Buscar tema o tecnología…" aria-label="Buscar etapa o tecnología"></label><div id="stage-list" class="stage-list" aria-label="Seleccionar una etapa"></div><div class="list-footnote"><span data-icon="spark"></span> Aprender → construir → explicar</div></div>
+          <article class="stage-detail" id="stage-detail" aria-live="polite" aria-atomic="false"></article>
+        </div>
+      </section>
+      <section class="section" id="tracks" aria-labelledby="tracks-title">
+        <div class="section-heading"><div><span class="eyebrow">02 / TRES POSIBILIDADES</span><h2 id="tracks-title">Elige después de probar.</h2><p>Backend, Linux, redes, Docker y AWS te preparan para las tres rutas. La experiencia te ayuda a decidir.</p></div></div>
+        <div class="track-grid" id="track-grid"></div>
+        <div class="comparison-wrap"><table class="comparison"><caption>Qué cambia entre las especialidades</caption><thead><tr><th>Tu trabajo</th><th>DevOps / SRE / Platform</th><th>Cloud Security</th><th>DevSecOps</th></tr></thead><tbody><tr><th>Pregunta principal</th><td>¿Cómo lo desplegamos y lo mantenemos fiable?</td><td>¿Quién accede y cómo protegemos el sistema?</td><td>¿Cómo hacemos que cada cambio sea seguro?</td></tr><tr><th>Código habitual</th><td>Python, Bash, Go, HCL, YAML</td><td>Python, Bash, HCL; lectura de código</td><td>Automatización, pipelines y políticas</td></tr><tr><th>Redes y Linux</th><td>Esenciales</td><td>Esenciales</td><td>Esenciales</td></tr><tr><th>Seguridad</th><td>Parte de operar bien</td><td>Especialización principal</td><td>Integrada en desarrollo y operación</td></tr><tr><th>Incidentes</th><td>Caídas, latencia, capacidad</td><td>Intrusiones, accesos, exposición</td><td>Vulnerabilidades y riesgos en los cambios</td></tr><tr><th>Qué mostrar</th><td>SLO, rollback, métricas y automatización</td><td>IAM, threat model y respuesta a incidentes</td><td>Pipeline con controles y remediación</td></tr></tbody></table></div>
+        <p class="note">DevOps es una forma de colaboración y automatización; SRE aplica ingeniería a la fiabilidad; Platform construye herramientas para desarrolladores. Los títulos cambian entre empresas y estas rutas no son una secuencia obligatoria de ascensos.</p>
+      </section>
+      <section class="section portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="section-heading"><div><span class="eyebrow">03 / APRENDE CON ALGO TUYO</span><h2 id="portfolio-title">Cuatro proyectos.<br>Una historia que demostrar.</h2><p>KAABLAB puede crecer contigo: desde una API hasta un sistema desplegado y protegido.</p></div><span class="section-pill">Proyecto conductor · KAABLAB</span></div>
+        <div class="project-grid" id="project-grid"></div>
+        <div class="architecture-panel"><div><span class="eyebrow">UNA ARQUITECTURA POSIBLE</span><h3>Así se conecta lo que aprendes.</h3><p>Empieza con una API y una base de datos. Añade las demás piezas cuando resuelvan una necesidad real de tu laboratorio.</p></div><div class="architecture" aria-label="Arquitectura de referencia KAABLAB"><div class="arch-node sensor-node"><span data-icon="cpu"></span><strong>ESP32 + LoRa</strong><span>Nodos y gateway</span></div><div class="arch-arrow" aria-hidden="true">↓</div><div class="arch-band"><span>ENTRADA</span><strong>HTTPS · WAF opcional · Load Balancer</strong></div><div class="arch-arrow" aria-hidden="true">↓</div><div class="arch-stack"><div class="arch-stack-title">CONTENEDORES · KUBERNETES AL AVANZAR</div><div class="replicas"><span>API Java</span><span>API Java</span><span>API Java</span></div></div><div class="arch-arrow" aria-hidden="true">↓</div><div class="arch-node"><span data-icon="database"></span><strong>PostgreSQL / RDS</strong><span>Red privada · Copias de seguridad</span></div><div class="arch-support"><div><span data-icon="git"></span><strong>GitHub Actions + Terraform</strong><span>Pruebas, escaneos, infraestructura y despliegue</span></div><div><span data-icon="activity"></span><strong>Prometheus + Grafana</strong><span>Métricas · OpenTelemetry · CloudTrail</span></div></div></div></div>
+        <div class="deliverable-note"><span data-icon="check"></span><p><strong>Haz tu trabajo revisable.</strong> Cada repositorio debe incluir README, instrucciones reproducibles, arquitectura, pruebas, decisiones y una demostración. Usa datos de muestra y configuración de ejemplo sin credenciales.</p></div>
+      </section>
+      <section class="section" id="career" aria-labelledby="career-title">
+        <div class="section-heading"><div><span class="eyebrow">04 / TU PRIMERA OPORTUNIDAD</span><h2 id="career-title">No esperes al último mes.</h2><p>Empieza a buscar prácticas cuando puedas enseñar un proyecto y explicar cómo funciona.</p></div></div>
+        <div class="career-grid" id="career-grid"></div>
+        <div class="career-years"><div><span>AÑO 01</span><h3>Ser un buen desarrollador.</h3><p>Java · Spring · SQL · Git · Linux · Docker</p></div><div><span>AÑO 02</span><h3>Entender sistemas reales.</h3><p>AWS · Redes · CI/CD · Terraform · Kubernetes · Observabilidad · Seguridad</p></div><div><span>AÑO 03 +</span><h3>Profundizar en tu especialidad.</h3><p>SRE · Platform · Cloud · AppSec · Cloud Security · DevSecOps</p></div></div>
+        <p class="note">Los meses orientan tu preparación; no garantizan contratación ni un puesto concreto. Adapta tus solicitudes a los requisitos de cada vacante y sigue construyendo experiencia.</p>
+      </section>
+      <section class="section" id="certifications" aria-labelledby="certifications-title">
+        <div class="section-heading"><div><span class="eyebrow">05 / CERTIFICA LO QUE YA SABES</span><h2 id="certifications-title">Experiencia primero.<br>Certificaciones con propósito.</h2><p>No necesitas coleccionarlas. Elige las que respaldan tu ruta y tus proyectos.</p></div><div class="cert-quote"><strong>Proyectos + experiencia</strong><span>antes que una lista de insignias</span></div></div>
+        <div class="table-scroll"><table class="cert-table"><thead><tr><th>Momento</th><th>Certificación</th><th>Para qué te sirve</th><th>Prioridad</th></tr></thead><tbody id="cert-rows"></tbody></table></div>
+        <p class="note">Las certificaciones, requisitos y temarios pueden cambiar. Consulta al proveedor antes de pagar. CAPM y PMP apoyan gestión de proyectos; PMI Student Membership es una membresía y no equivale a una certificación.</p>
+      </section>
+      <section class="section" id="week" aria-labelledby="week-title">
+        <div class="section-heading"><div><span class="eyebrow">06 / DALE ESPACIO EN TU SEMANA</span><h2 id="week-title">La constancia construye la ruta.</h2><p>Un plan sostenible junto con la universidad. Ajusta las horas a tu carga real.</p></div></div>
+        <div class="weekly-panel"><div class="weekly-control"><span class="eyebrow">TU DISPONIBILIDAD</span><div class="hours-number"><output id="hours-value" for="hours">8</output><span>horas / semana</span></div><label for="hours" class="visually-hidden">Horas disponibles por semana</label><input id="hours" type="range" min="4" max="16" value="8" step="1"><div class="range-labels"><span>4 h</span><span>16 h</span></div><p>Los 18–24 meses son orientativos. Ajusta la velocidad según tu base, práctica y objetivos logrados.</p></div><div class="weekly-breakdown" id="weekly-breakdown"></div></div>
+        <div class="habits-grid"><div><span data-icon="book"></span><h3>Lee con intención.</h3><p>Usa documentación oficial y practica inglés técnico 15–20 minutos al día. Anota qué problema resuelve cada herramienta.</p></div><div><span data-icon="code"></span><h3>Construye y depura.</h3><p>Programa desde una idea propia. Si usas IA, pide pistas, comprueba el resultado y explica cada decisión con tus palabras.</p></div><div><span data-icon="git"></span><h3>Haz visible tu progreso.</h3><p>Commits pequeños, notas de errores, README actualizado y una demo. Al cerrar la semana, elige una meta concreta para la siguiente.</p></div></div>
+        <div class="first-week"><div><span class="eyebrow">TU PRIMERA SEMANA</span><h3>Abre el editor. Empieza pequeño.</h3></div><ol><li>Prepara un JDK compatible con tu versión de Spring, tu IDE, Git y GitHub.</li><li>Crea un inventario de consola con una clase Producto y una lista de productos.</li><li>Añade crear, listar y buscar; valida datos y depura un error.</li><li>Sube commits con un README y explica qué harás después.</li></ol><a href="#journey" class="button button-dark" id="first-stage-button">Abrir etapa 01 <span data-icon="arrow-right"></span></a></div>
+      </section>
+      <section class="section" id="resources" aria-labelledby="resources-title">
+        <div class="section-heading"><div><span class="eyebrow">07 / APRENDE DESDE LA FUENTE</span><h2 id="resources-title">Tu biblioteca de referencia.</h2><p>Documentación y laboratorios de los proyectos y organizaciones que mantienen estas tecnologías.</p></div><span class="section-pill">Recursos oficiales</span></div>
+        <div class="resource-filters" id="resource-filters" role="group" aria-label="Filtrar recursos por área"></div><div class="resources-grid" id="resources-grid"></div>
+      </section>
+      <section class="closing-panel"><div><span class="eyebrow">EL SIGUIENTE PASO ES CONCRETO</span><h2>Haz que tu código funcione.<br>Luego aprende a cuidar el sistema.</h2><p>No necesitas elegir tu especialidad hoy. Necesitas un primer proyecto que puedas construir, explicar y mejorar.</p></div><a href="#journey" class="button button-lime" id="closing-resume">Continuar mi camino <span data-icon="arrow-right"></span></a></section>
+      <footer><a class="footer-brand" href="#overview">PATH<span>·</span></a><p>Tu roadmap personal · Backend → Cloud → DevOps & Security</p><div class="footer-actions"><button id="export-progress">Exportar progreso</button><button id="import-progress">Importar progreso</button><button id="reset-progress">Reiniciar</button></div><small>El progreso se guarda en este navegador. Exporta una copia para moverlo a otro dispositivo.</small></footer>
+    </main>
+  </div>
+  <input type="file" id="progress-file" accept="application/json,.json" hidden>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="reset-dialog"><form method="dialog"><span class="eyebrow">EMPEZAR DE NUEVO</span><h2>¿Reiniciar tu progreso?</h2><p>Se borrarán los objetivos marcados en este navegador. Puedes exportar una copia antes de hacerlo.</p><div class="dialog-actions"><button class="button button-light" value="cancel">Conservar progreso</button><button class="button button-dark" value="reset">Reiniciar</button></div></form></dialog>
+  <div id="print-guide" aria-hidden="true"></div>
+  <noscript><div class="noscript">Activa JavaScript para explorar las etapas y guardar tu progreso. El roadmap también está documentado en el archivo ROADMAP.md del código fuente.</div></noscript>
+</body>
+</html>
