@@ -1,6 +1,6 @@
 # PATH — Roadmap de Backend a Cloud & Security
 
-**[Abrir la web del roadmap](https://david-cloud-roadmap.dragn-12.chatgpt.site)** · [Leer la guía completa](ROADMAP.md)
+**[Abrir la web del roadmap](https://dragonf12.github.io/RoadMap/)** · [Leer la guía completa](ROADMAP.md) · [Versión en ChatGPT](https://david-cloud-roadmap.dragn-12.chatgpt.site)
 
 Una página web visual en español para David: Java y Backend como base, después Linux, redes, Docker, AWS, CI/CD, Terraform, Kubernetes, observabilidad y seguridad. Contiene el roadmap completo y tres rutas: DevOps/SRE/Platform, Cloud Security y DevSecOps.
 
@@ -13,7 +13,7 @@ git clone https://github.com/dragonf12/RoadMap.git
 cd RoadMap
 ```
 
- No requiere instalación, servidor de backend ni claves de API. También puedes ejecutar:
+No requiere instalación, servidor de backend ni claves de API. También puedes ejecutar:
 
 ```bash
 python3 -m http.server 8000 --directory dist
@@ -38,6 +38,8 @@ El progreso pertenece a este navegador y origen; no se sincroniza entre disposit
 
 | Archivo | Función |
 |---|---|
+| `index.html` | Entrada de GitHub Pages; abre el sitio de `dist/` |
+| `.nojekyll` | Publicación estática sin procesamiento Jekyll |
 | `dist/index.html` | Estructura y secciones de la web |
 | `dist/styles.css` | Diseño responsive y versión para imprimir |
 | `dist/content.js` | Todo el contenido editorial |
@@ -65,7 +67,19 @@ Los checks verifican la integridad de las 12 etapas, sus referencias, enlaces in
 
 ## Alojamiento
 
-La página es estática: sirve el contenido de `dist/` con cualquier proveedor compatible. Para GitHub Pages, configura una publicación de esa carpeta con GitHub Actions o copia su contenido al directorio que Pages esté sirviendo. La disponibilidad de Pages para repositorios privados depende del plan. El workflow incluido comprueba el proyecto y no publica automáticamente.
+La página es estática. GitHub Pages ya puede servirla con esta configuración en **Settings → Pages**:
+
+- **Source:** Deploy from a branch.
+- **Branch:** main.
+- **Folder:** /(root).
+
+Abre **https://dragonf12.github.io/RoadMap/**. El `index.html` de la raíz te lleva a `dist/` y conserva los parámetros y enlaces a secciones. La aplicación y sus recursos se mantienen juntos en esa carpeta. `.nojekyll` permite publicarlos como archivos estáticos.
+
+GitHub Pages solo permite seleccionar la raíz o `/docs` al publicar desde una rama; `dist/` no aparece en ese menú. Esta estructura funciona con `/(root)` y las actualizaciones de `main` se publican automáticamente mediante Pages. El workflow `check.yml` comprueba el código; GitHub administra por separado el flujo de publicación de Pages.
+
+Referencia: [Configurar el origen de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+Para otro proveedor compatible, sirve directamente el contenido de `dist/`. La disponibilidad de Pages para repositorios privados depende del plan.
 
 `.openai/hosting.json` vincula esta copia al alojamiento de Sites. Conserva su ID para editar ese mismo sitio; si reutilizas el código para un sitio independiente, elimina esa vinculación antes de registrarlo.
 
